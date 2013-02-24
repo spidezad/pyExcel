@@ -1,0 +1,12 @@
+###########################################
+
+ pyExcel module
+ Author: Tan Kok Hua (Guohua tan)
+ Email: Guohua.tan@seagate.com/kokhua81@gmail.com
+ Revised date: Feb 24 2012
+
+############################################
+
+ Notes:
+     Derived/modified from original ExcelLink.py found on internet (2008)
+	 This is initial version for Git hub. A lot of documentation are not included.
