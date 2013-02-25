@@ -4,7 +4,7 @@
  pyExcel module
  Author: Tan Kok Hua (Guohua tan)
  Email: Guohua.tan@seagate.com/kokhua81@gmail.com
- Revised date: Feb 24 2012
+ Revised date: Feb 25 2012
 
 ############################################
 
@@ -12,6 +12,7 @@
      Derived/modified from original ExcelLink.py found on internet
 
  Changes:
+    Feb 25 2013: fix bug in clearrange function where the clearformat and clearcontent version are reversed.
     Feb 17 2013: Remove the get xls avaliable function
                : Allow copy data to excel function to have transpose function 
     Dec 25 2012: Add in chart formatter function
@@ -307,9 +308,9 @@ class UseExcel(object):
             rangeAddress =self.convert_tuple_to_cell_str(rangeAddress)
         
         if clear_contents: 
-            sht.Range(rangeAddress).ClearFormats() 
+            sht.Range(rangeAddress).ClearContents()
         if clear_format: 
-            sht.Range(rangeAddress).ClearContents() 
+            sht.Range(rangeAddress).ClearFormats()
 
 
 
